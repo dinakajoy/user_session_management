@@ -11,7 +11,11 @@ export default {
       url: process.env.DBURL || '',
       saltWorkFactor: Number(String(process.env.SALTWORKFACTOR)) || 10,
     },
-    jwt: {
+    session: {
       secret: process.env.SECRET || 'secret',
+    },
+    jwt: {
+      accessTokenSecret: process.env.ACCESS_TOKEN_SECRET || 'J6sqQuxISZfVfS+7/bWTtX',
+      refreshTokenSecret: process.env.REFRESH_TOKEN_SECRET || 'J6sqQuxISZfVfS+7/bWTtX'
     }
 };

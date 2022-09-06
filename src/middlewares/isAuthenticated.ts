@@ -1,7 +1,7 @@
 import { Request, Response, NextFunction } from 'express';
 import { JwtPayload } from 'jsonwebtoken';
 import { logger } from '../utils';
-import { verifyAccessToken } from '../utils/helpers';
+import { verifyAccessToken } from '../utils/jwtUtils';
 import { isUser } from '../services/user.service';
 import {
   InvalidException,

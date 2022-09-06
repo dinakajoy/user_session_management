@@ -3,6 +3,7 @@ import isAuthenticated from '../middlewares/isAuthenticated';
 import acountLimiter from '../middlewares/rateLimiter';
 import {
   userValidation,
+  userWithoutPasswordValidation,
   validate,
 } from '../validations/user.validation';
 import {
@@ -32,7 +33,7 @@ router.post(
 );
 router.put(
   '/:userId',
-  userValidation(),
+  userWithoutPasswordValidation(),
   validate,
   isAuthenticated,
   updateUserController

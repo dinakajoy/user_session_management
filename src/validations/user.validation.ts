@@ -7,6 +7,11 @@ export const userValidation = () => [
   body('password').isLength({ min: 5 }).isStrongPassword(),
 ];
 
+export const userWithoutPasswordValidation = () => [
+  body('name').not().isEmpty().trim().escape(),
+  body('email').isEmail().normalizeEmail(),
+];
+
 export const validate = (req: Request, res: Response, next: NextFunction) => {
   const errors = validationResult(req);
   if (errors.isEmpty()) {

@@ -11,20 +11,26 @@ import { connectDB, logger, corsOptions, store } from './utils';
 
 dotenv.config();
 
+declare module 'express-session' {
+  interface SessionData {
+    isAuthenticated: string | any;
+  }
+}
+
 const port = config.get('environment.port') as number;
 const host = config.get('environment.host') as string;
-const secret = config.get('jwt.secret') as string;
+const sessionSecret = config.get('session.secret') as string;
 
 const app: Express = express();
 
-app.use(cors(corsOptions));
+// app.use(cors(corsOptions));
 app.use(compression());
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
 app.use(
   session({
-    secret,
+    secret: sessionSecret,
     cookie: {
       maxAge: 1000 * 60 * 60 * 24 * 1, // 1 day
       secure: process.env.NODE_ENV === 'production',

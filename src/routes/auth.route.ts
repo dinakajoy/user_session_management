@@ -1,6 +1,5 @@
 import * as express from 'express';
-import isAuthenticated from '../middlewares/isAuthenticated';
-import acountLimiter from '../middlewares/rateLimiter';
+import { isAuthenticated, acountLimiter } from '../middlewares';
 import {
   loginValidation,
   forgetPasswordValidation,

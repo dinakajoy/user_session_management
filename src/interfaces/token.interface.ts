@@ -1,10 +1,5 @@
-interface IEmployeeInfo {
-  email: string;
-  role: string;
-}
-
 export interface ICreateToken {
-  employeeInfo: IEmployeeInfo;
+  email: string;
   isRefreshToken: boolean;
 }
 

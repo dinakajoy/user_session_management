@@ -4,10 +4,10 @@
 user_session_management is an authentication REST API. This api takes care of signup, signin, update account, forgot password, reset password, get users, get user, delete user.
 
 ## Installation
-Clone the repository and cd into the project directory
-Run `npm install` or `yarn install` to install all project dependencies
-Create .env file and add your database details - Check `.env.example` file
-Run `npm run develop` or `yarn develop` to start local server which will run on localhost:1337
+Clone the repository and cd into the project directory  
+Run `npm install` or `yarn install` to install all project dependencies  
+Create .env file and add your database details - Check `.env.example` file  
+Run `npm run develop` or `yarn develop` to start local server which will run on localhost:1337  
 
 ## Usage
 ### API Endpoints
@@ -23,9 +23,9 @@ Run `npm run develop` or `yarn develop` to start local server which will run on 
 - DELETE `/api/users/:userId` to delete user's account by id
 
 ## Built With
-Node/Express - The web framework used
-MongoDB - DataBase Management System
-Redis - For session management, for faster access 
+Node/Express - The web framework used  
+MongoDB - DataBase Management System  
+Redis - For session management, for faster access   
 
 ## Contributing: 
 To contribute, raise an issue and it will be reviewed
